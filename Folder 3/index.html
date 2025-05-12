@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contoh CSS Position</title>
+  <link rel="stylesheet" href="style.css ">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 2000px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .box {
+      width: 200px;
+      height: 100px;
+      color: white;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .static {
+      position: static;
+      background-color: #3498db;
+    }
+
+    .relative {
+      position: relative;
+      background-color: #2ecc71;
+      top: 20px;
+      left: 20px;
+    }
+
+    .absolute-wrapper {
+      position: relative;
+      height: 150px;
+      background-color: #ecf0f1;
+      margin-bottom: 20px;
+    }
+
+    .absolute {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 150px;
+      height: 80px;
+      background-color: #e67e22;
+    }
+
+    .fixed {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #9b59b6;
+      z-index: 1000;
+    }
+
+    .spacer {
+      height: 1000px;
+    }
+
+    .sticky-container {
+      margin-top: 50px;
+    }
+
+    .sticky {
+      position: sticky;
+      top: 0;
+      background-color: #e74c3c;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Position: Static (Default)</h2>
+    <div class="box static">Box Static</div>
+
+    <h2>Position: Relative</h2>
+    <div class="box relative">Box Relative</div>
+
+    <h2>Position: Absolute (di dalam wrapper relative)</h2>
+    <div class="absolute-wrapper">
+      <div class="box absolute">Box Absolute</div>
+    </div>
+
+    <h2>Position: Fixed (Selalu di pojok kanan atas)</h2>
+    <div class="box fixed">Box Fixed</div>
+
+    <div class="sticky-container">
+        <div class="box sticky">Saya nempel sampai akhir container!</div>
+        <!-- Konten panjang yang ada di dalam container -->
+        <p>Konten baris 1…</p>
+        <p>Konten baris 2…</p>
+        <!-- ulangi atau pakai spacer -->
+        <p style="margin-top:900px;">Akhir dari container</p>
+      </div>
+  </div>
+
+</body>
+</html>

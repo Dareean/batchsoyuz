@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="pertemuan4.js"></script>
+</head>
+<body>
+    <h1 style ="font-family : 'Bungee Spice', sans-serif; font-weight: 400; font-style: normal;">
+        Hello <span id="nama"></span>
+    </h1>
+    
+
+    <center>
+        <button onclick="addNama()" style="background-color: orange; padding: 1em; font-weight: bold; border-radius: 15px;">Tambah</button>
+        <button onclick="deleteNama()" style="background-color: orange; padding: 1em; font-weight: bold; border-radius: 15px;">Hapus</button>
+
+    </center>
+</body>
+<script>
+    function addNama() {
+        const nama = document.getElementById("nama");
+        nama.innerText="Hello Daren";
+    }
+
+    function deleteNama() {
+        const nama = document.getElementById("nama");
+        nama.remove();
+    }
+</script>
+</html>    
+
+
+
+
+    
